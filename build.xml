@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="build" name="GraphicEffect">
+  <property name="debuglevel" value="source,lines,vars"/>
+  <property name="target" value="1.6"/>
+  <property name="source" value="1.6"/>
+  <property name="src" value="src"/>
+  <property name="dest" value="bin"/>
+  <property name="lib" value="lib"/>
+  <path id="classpath">
+  </path>
+  <target name="init">
+    <mkdir dir="${dest}"/>
+  </target>
+  <target name="clean">
+    <delete dir="${dest}"/>
+    <delete file="${ant.project.name}.jar"/>
+  </target>
+  <target depends="init" name="build">
+    <echo message="${ant.project.name}: ${ant.file}"/>
+    <javac 
+      debug="true" 
+      debuglevel="${debuglevel}" 
+      destdir="${dest}" 
+      source="${source}" 
+      target="${target}" 
+      includeantruntime="false"
+    >
+      <src path="src"/>
+      <exclude name="**/.svn/**"/>
+      <exclude name=".svn/**"/>
+      <classpath refid="classpath"/>
+    </javac>
+    <jar destfile="${ant.project.name}.jar">
+      <manifest>
+        <attribute name="Main-Class" value="graphiceffect.main.GraphicEffectMain"/>
+        <attribute name="Class-Path" value="."/>
+      </manifest>
+      <fileset includes="**/*.class" dir="${dest}"/>
+      <fileset includes="**/*.java" dir="${src}"/>
+      <fileset includes="scene/**" dir="."/>
+      <fileset includes="image/**" dir="."/>
+    </jar>
+  </target>
+</project>

@@ -1,0 +1,156 @@
+<?xml version = "1.0" ?>
+
+<graphiceffect>
+
+  <nogui>false</nogui>
+  <width>120</width>
+  <height>48</height>
+  <pixelSize>3</pixelSize>
+  <!--hostname/-->
+  <hostname>192.168.88.117</hostname>
+  <port>1337</port>
+  <fpsTarget>15</fpsTarget>
+
+  <!-- Bitlair logo -->
+  
+  <scene>
+    <duration>10</duration>
+    <effect>
+      <className>graphiceffect.effect.Noise</className>
+      <palette>
+        <className>graphiceffect.palette.RedGreenYellow</className>
+        <param name="alpha" value="255"/>
+      </palette>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.Image2</className>
+      <param name="image" value="image/bitlairLogo2.png"/>
+      <palette>
+        <className>graphiceffect.palette.XmlColor</className>
+        <param name="color" value="000000"/>
+      </palette>
+    </effect>
+  </scene>
+  
+  <!-- Spiral and text on sinus path -->
+
+  <scene>
+    <duration>30</duration>
+    <effect>
+      <className>graphiceffect.effect.SolidColor</className>
+      <param name="color" value="0"/>
+      <palette>
+        <className>graphiceffect.palette.XmlColor</className>
+        <param name="color" value="0"/>
+      </palette>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.Spiral</className>
+      <param name="font" value="DosHercules"/>
+      <palette>
+        <className>graphiceffect.palette.RedGreenYellow</className>
+        <param name="hasBlack" value="false"/>
+        <param name="distance" value="1"/>
+        <!--param name="alpha" value="64"/-->
+      </palette>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.Text3</className>
+      <param name="font" value="DosHercules"/>
+      <palette>
+        <className>graphiceffect.palette.XmlColor</className>
+        <param name="distance" value="1"/>
+        <param name="color" value="ff0000"/>
+        <param name="color" value="ff8000"/>
+        <param name="color" value="00ff80"/>
+        <param name="color" value="8000ff"/>
+      </palette>
+    </effect>
+  </scene>
+  
+  <!-- Digital clock -->
+
+  <scene>
+    <duration>20</duration>
+    <effect>
+      <className>graphiceffect.effect.RotatingColors</className>
+      <param name="color" value="1"/>
+      <palette>
+        <className>graphiceffect.palette.RedGreenYellow</className>
+        <param name="hasBlack" value="false"/>
+        <param name="distance" value="10"/>
+        <!--param name="alpha" value="64"/-->
+      </palette>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.DigitalClock</className>
+      <param name="sizex" value=".1"/>
+      <param name="sizey" value=".1"/>
+      <param name="speed" value=".7"/>
+      <palette>
+        <className>graphiceffect.palette.RedGreenYellow</className>
+        <param name="hasBlack" value="false"/>
+        <param name="distance" value="200"/>
+        <!--param name="alpha" value="64"/-->
+      </palette>
+    </effect>
+  </scene>
+  
+  <!-- Power meter -->
+  
+  <scene>
+    <duration>10</duration>
+    <effect>
+      <className>graphiceffect.effect.SolidColor</className>
+      <param name="color" value="0"/>
+      <palette>
+        <className>graphiceffect.palette.RedGreenYellow</className>
+        <param name="hasBlack" value="true"/>
+        <param name="distance" value="1"/>
+        <!--param name="alpha" value="64"/-->
+      </palette>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.PowerMeter</className>
+      <param name="font" value="DosHercules"/>
+      <palette>
+        <className>graphiceffect.palette.RedGreenYellow</className>
+        <param name="hasBlack" value="false"/>
+        <param name="distance" value="1"/>
+        <!--param name="alpha" value="64"/-->
+      </palette>
+    </effect>
+  </scene>
+
+  <scene>
+    <duration>10</duration>
+    <effect>
+      <className>graphiceffect.effect.Gif</className>
+      <param name="file" value="image/girl-seduces-husband.gif"/>
+      <param name="cmin" value="110"/>
+    </effect>
+  </scene>
+
+  <scene>
+    <duration>600</duration>
+    <effect>
+      <className>graphiceffect.effect.SolidColor</className>
+       <param name="color" value="0"/>
+      <palette>
+        <className>graphiceffect.palette.XmlColor</className>
+        <param name="color" value="0"/>
+      </palette>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.Life</className>
+      <param name="file" value="image/girl-seduces-husband.gif"/>
+      <param name="cmin" value="110"/>
+    </effect>
+    <effect>
+      <className>graphiceffect.effect.Bitlair</className>
+    </effect>
+
+  </scene>
+
+</graphiceffect>
+
